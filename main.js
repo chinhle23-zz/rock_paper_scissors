@@ -44,14 +44,14 @@ function playRound (playerSelection, computerSelection) {
         return drawMessage
     }
   } else {
-    alert('Invalid entry! You automatically lose this round')
+    window.alert('Invalid entry! You automatically lose this round')
     return loseMessage
   }
 }
 
 function game () {
   for (let i = 1; i < 6; i++) {
-    let playerSelection = prompt('Please enter your choice: (rock, paper, or scissors)')
+    let playerSelection = window.prompt('Please enter your choice: (rock, paper, or scissors)')
     let computerSelection = computerPlay()
     console.log(`This is round ${i}:`)
     let roundResult = playRound(playerSelection, computerSelection)
